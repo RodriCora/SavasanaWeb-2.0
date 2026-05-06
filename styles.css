@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f1ea;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: relative;
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* BRAND CENTRADA */
+.brand-center {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'Cinzel', serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #d6cfc7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 60vh;
+    background: url("img/fondo.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* capa oscura */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* contenido */
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* efecto profundidad */
+.hero {
+    animation: depthZoom 35s ease-in-out infinite;
+}
+
+@keyframes depthZoom {
+    0% { background-size: 100%; }
+    50% { background-size: 108%; }
+    100% { background-size: 100%; }
+}
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0;
+}
+
+.card {
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    background: #efefef;
+    margin: 0;
+    padding: 20px 0;
+    font-weight: normal;
+    font-family: 'Cinzel', serif;
+}
+
+.desc {
+    font-size: 14px;
+    padding: 0 10px 15px;
+    color: #555;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categorias {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.categorias h2 {
+    font-family: 'Cinzel', serif;
+}
+
+.circulos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 120px;
+    height: 120px;
+    background: #d6cfc7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    padding: 70px 20px;
+    text-align: center;
+    background: #e7ded2; 
+}
+
+.formulario {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.formulario button {
+    padding: 12px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   INFO FINAL
+========================= */
+
+.info-final {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background: #efe9e1;
+}
+
+.bloque {
+    width: 250px;
+    text-align: center;
+}
+
+.bloque h3 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
