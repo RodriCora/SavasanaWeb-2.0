@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Savasana</title>
+    <link rel="stylesheet" href="../registro.css"> 
+</head>
+<body>
+
+<section class="registro">
+    <h2>Crear tu cuenta</h2>
+    <form id="formRegistro" class="formulario-registro">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="date" id="fechaNacimiento" required>
+        <input type="text" id="ciudad" placeholder="Ciudad" required>
+        <input type="email" id="email" placeholder="Email (ej: usuario@mail.com)" required>
+        <input type="password" id="password" placeholder="Contraseña (mín 5 caracteres)" required>
+        <button type="submit" class="btn-enviar">Registrarse</button>
+    </form>
+</section>
+
+<div id="notificacion-global" class="notificacion-hidden">
+    <p id="notificacion-texto"></p>
+</div>
+
+<script src="../js/auth.js"></script>
+</body>
+</html>

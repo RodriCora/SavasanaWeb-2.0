@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savasana</title>
 
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="header">
-
     <div class="logo-container">
-        <img src="img/logo.jpg" alt="Savasana" class="logo">
+        <img src="img/logo.jpg" alt="Savasana" class="logo" width="60" height="60">
     </div>
 
-    <div class="brand-center">
-        Savasana
-    </div>
+    <div class="brand-center">Savasana</div>
 
     <nav class="nav">
         <a href="#">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="#">Rituales</a>
+        <a href="#productos">Productos</a>
         <a href="#contacto">Contacto</a>
-    </nav>
 
+        <div id="auth-container">
+            <form id="formLoginHeader" class="nav-login">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="submit" class="btn-crear">Entrar</button>
+                <a href="pages/registro.html" class="btn-crear">Crear cuenta</a>
+            </form>
+        </div>
+
+        <div class="carrito-container">
+            <a href="#" class="btn-carrito">🛒<span id="carrito-count">0</span></a>
+        </div>
+    </nav>
 </header>
 
 <section class="hero">
@@ -39,31 +47,32 @@
     </div>
 </section>
 
-<section class="productos">
-
+<section class="productos" id="productos">
     <div class="card">
-        <img src="img/sahumerio.jpg" alt="Sahumerios">
+        <img src="img/sahumerio.jpg" alt="Sahumerios" width="260" height="180">
         <h3>Sahumerios</h3>
         <p class="desc">Aromas naturales para limpiar y armonizar tu energía.</p>
+        <p class="precio">$1.500</p>
+        <button class="btn-agregar" data-id="1" data-nombre="Sahumerios" data-precio="1500">Agregar al carrito</button>
     </div>
-
     <div class="card">
-        <img src="img/spray.jpg" alt="Sprays">
+        <img src="img/spray.jpg" alt="Sprays" width="260" height="180">
         <h3>Sprays</h3>
         <p class="desc">Brumas áuricas para protección y equilibrio.</p>
+        <p class="precio">$3.200</p>
+        <button class="btn-agregar" data-id="2" data-nombre="Sprays" data-precio="3200">Agregar al carrito</button>
     </div>
-
     <div class="card">
-        <img src="img/ritual.jpg" alt="Rituales">
+        <img src="img/ritual.jpg" alt="Rituales" width="260" height="180">
         <h3>Rituales</h3>
         <p class="desc">Conectá con tu interior a través de prácticas conscientes.</p>
+        <p class="precio">$5.000</p>
+        <button class="btn-agregar" data-id="3" data-nombre="Rituales" data-precio="5000">Agregar al carrito</button>
     </div>
-
 </section>
 
 <section class="categorias">
     <h2>Nuestros productos</h2>
-
     <div class="circulos">
         <div class="item">Protección</div>
         <div class="item">Relajación</div>
@@ -72,47 +81,56 @@
     </div>
 </section>
 
-
 <section class="contacto" id="contacto">
-
     <h2>Contacto</h2>
-
     <form class="formulario">
-
         <input type="text" placeholder="Tu nombre" required>
         <input type="email" placeholder="Tu email" required>
-        <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-
+        <textarea rows="5" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
-
     </form>
-
 </section>
 
-
 <section class="info-final">
-
     <div class="bloque">
         <h3>Sobre Savasana</h3>
         <p>Productos naturales para equilibrar tu energía y bienestar.</p>
     </div>
-
     <div class="bloque">
         <h3>Envíos</h3>
         <p>Envíos a todo el país. Preparación artesanal.</p>
     </div>
-
     <div class="bloque">
         <h3>Contacto</h3>
-        <p>Instagram: @savasana <br>Email: contacto@savasana.com</p>
+        <p>Instagram: @savasana<br>Email: contacto@savasana.com</p>
     </div>
-
 </section>
 
 <footer class="footer">
     <p>© 2026 Savasana - Todos los derechos reservados</p>
 </footer>
 
-</body>
+<div id="carrito-modal" class="carrito-modal" style="display: none;">
+    <div class="carrito-contenido">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="btn-cerrar-carrito">&times;</button>
+        </div>
+        <div id="carrito-items"></div>
+        <div class="carrito-footer">
+            <p>Total: <strong id="carrito-total">$0</strong></p>
+            <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+            <button id="btn-comprar" class="btn-comprar">Finalizar compra</button>
+        </div>
+    </div>
+</div>
 
+<div id="notificacion-global" class="notificacion-hidden">
+    <p id="notificacion-texto"></p>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/carrito.js"></script>
+
+</body>
 </html>
