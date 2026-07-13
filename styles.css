@@ -1,10 +1,12 @@
 /* Global */
 
 body {
-    visibility: visible;
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5f1ea;
+}
+.brand-center, h2, .nav-login input, .btn-crear, .card h3, .btn-agregar, .btn-comprar, .btn-vaciar, #notificacion-global {
+    font-family: 'Cinzel', serif;
 }
 
 html {
@@ -21,10 +23,20 @@ html {
     padding: 10px 40px;
     position: fixed; 
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
+}
+
+.header-user {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-user strong {
+    color: white;
 }
 
 .logo-container {
@@ -110,7 +122,7 @@ html {
 
 .hero {
     height: 60vh;
-    background: url("img/fondo.jpg") center/cover no-repeat;
+    background: url("img/fondo.webp") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -471,10 +483,10 @@ html {
 
 /* Notificaciones */
 #notificacion-global {
-    position: fixed !important;
-    top: 20px !important;
-    right: 20px !important;
-    z-index: 99999 !important;
+    position: fixed ;
+    top: 20px ;
+    right: 20px ;
+    z-index: 99999 ;
     padding: 15px 25px;
     background: #fdfaf6;
     border: 1px solid #e0dcd5;
